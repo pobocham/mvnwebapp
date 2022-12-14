@@ -4,13 +4,14 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        sh 'mkdir -pv test_pipline '
+        sh '''mkdir -pv test_pipline 
+pwd'''
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        sh 'cd test_pipline'
+        sh 'ls -lrsh'
       }
     }
 
